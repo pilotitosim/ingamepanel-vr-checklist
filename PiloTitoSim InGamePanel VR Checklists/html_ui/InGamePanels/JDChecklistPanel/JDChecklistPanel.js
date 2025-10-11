@@ -15,7 +15,7 @@ class IngamePanelJDChecklistPanel extends HTMLElement {
         // Establecer el src del iframe directamente
         const iframe = document.querySelector("#JDChecklistPanelIframe");
         if (iframe) {
-            iframe.src = "https://www.perseoairlinesva.com/checklists/pdf-list.html"; // <- tu URL personalizada aquí
+            iframe.src = "https://github.com/pilotitosim/ingamepanel-vr-checklist/blob/main/pdf-list.html"; // <- tu URL personalizada aquí
         }
     }
 
@@ -32,7 +32,7 @@ class IngamePanelJDChecklistPanel extends HTMLElement {
         // Asegurar que el iframe tenga la URL correcta
         const iframe = document.querySelector("#JDChecklistPanelIframe");
         if (iframe) {
-            iframe.src = "https://www.perseoairlinesva.com/checklists/pdf-list.html"; // <- tu URL personalizada aquí también
+            iframe.src = "https://github.com/pilotitosim/ingamepanel-vr-checklist/blob/main/pdf-list.html"; // <- tu URL personalizada aquí también
         }
     }
 
@@ -51,3 +51,4 @@ if (typeof checkAutoload === 'function') {
 } else { 
     console.warn("La función checkAutoload no está definida."); 
 }
+
