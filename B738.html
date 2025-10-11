@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Checklist B738 PMDG (VR Default)</title>
+  <style>
+    /* Establece un tamaño de fuente base GRANDE por defecto, optimizado para VR */
+    /* ¡AJUSTA ESTE VALOR SEGÚN TUS PRUEBAS EN VR! Prueba 50px, 60px, 70px... */
+    html {
+      /* Cambiado a 50px según solicitud */
+      font-size: 50px; 
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: Arial, sans-serif; /* Fuente Sans-serif recomendada */
+      /* Padding ajustado a rem (20px / 50px = 0.4rem) */
+      padding: 0.4rem; 
+      line-height: 1.5; /* Interlineado adecuado */
+      font-size: 1rem; /* Tamaño base del cuerpo (50px) */
+      margin: 0;
+    }
+
+    /* No se necesita clase vr-mode, el tamaño grande es el predeterminado */
+
+    h1, h2 {
+      color: #4fc3f7;
+      border-bottom: 1px solid #4fc3f7;
+      /* Padding ajustado (5px / 50px = 0.1rem) */
+      padding-bottom: 0.1rem; 
+      /* Margen ajustado (16px / 50px = 0.32rem) */
+      margin-bottom: 0.32rem; 
+      margin-top: 0.4rem; /* Añadido margen superior */
+      font-weight: bold; /* Asegurar buen grosor */
+    }
+
+    h1 {
+      /* Tamaño ajustado (1.2rem * 50px = 60px) */
+      font-size: 1.2rem; 
+    }
+
+    h2 {
+      /* Tamaño ajustado (1.1rem * 50px = 55px) */
+      font-size: 1.1rem; 
+    }
+
+    p { /* Estilo para los párrafos de versión/propietario */
+        /* Tamaño ajustado (0.8rem * 50px = 40px) */
+        font-size: 0.8rem; 
+        margin-bottom: 0.1rem; /* Reducido margen inferior entre estos párrafos */
+        margin-top: 0; /* Quitado margen superior */
+        color: #bdbdbd; /* Un gris más claro */
+        line-height: 1.2; /* Ajustado interlineado para estos párrafos */
+    }
+    p strong {
+        color: #e0e0e0; /* Blanco un poco menos intenso */
+    }
+
+    .section {
+      /* Margen ajustado y aumentado para más espacio (30px / 50px = 0.6rem -> aumentado a 0.75rem) */
+      margin-bottom: 0.75rem; 
+    }
+
+    .line {
+      display: flex;
+      justify-content: space-between;
+      font-family: monospace; /* Mantenemos monoespaciada para alineación */
+      /* Tamaño ajustado (0.9rem * 50px = 45px) */
+      font-size: 0.9rem; 
+      /* Margen ajustado (8px / 50px = 0.16rem) */
+      margin-bottom: 0.16rem; 
+      align-items: baseline; 
+      /* Grosor recomendado para VR */
+      font-weight: 500; 
+    }
+
+    .line span {
+      flex-shrink: 0;
+      /* Padding ajustado (8px / 50px = 0.16rem) */
+      padding-right: 0.16rem; 
+    }
+     .line span:last-child {
+       /* Padding ajustado (8px / 50px = 0.16rem) */
+       padding-left: 0.16rem; 
+       padding-right: 0;
+       font-weight: bold; 
+       color: #a5d6a7; 
+     }
+
+    .dots {
+      flex-grow: 1;
+      border-bottom: 1px dotted #777;
+      /* Margen ajustado (10px / 50px = 0.2rem) */
+      margin: 0 0.2rem; 
+      position: relative;
+      bottom: 0.25em; 
+      min-width: 0.4rem; /* 20px / 50px */
+    }
+
+    .back-button {
+      display: inline-block;
+      /* Margen ajustado (20px / 50px = 0.4rem) */
+      margin-bottom: 0.4rem; 
+      /* Padding ajustado (12px/50px=0.24rem, 24px/50px=0.48rem) */
+      padding: 0.24rem 0.48rem; 
+      background-color: #4fc3f7;
+      color: #000;
+      text-decoration: none;
+      /* Border-radius ajustado (5px / 50px = 0.1rem) */
+      border-radius: 0.1rem; 
+      font-weight: bold;
+      /* Tamaño ajustado (0.9rem * 50px = 45px) */
+      font-size: 0.9rem; 
+    }
+
+  </style>
+</head>
+<body>
+
+  <a class="back-button" href="pdf-list.html">&laquo; Vuelve a la lista de checklists</a>
+      
+  <h1>Checklist PMDG 737-800</h1>
+  <p><strong>Version:</strong> 0.1.0 | <strong>Publicado:</strong> 24.08.22</p><p><strong>Propietario:</strong> @PiloTitoSim</p>
+
+  <div class="section">
+    <h2>COCKPIT PREPARATION</h2>
+    <div class="line"><span>Parking Brake</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>Battery</span><span class="dots"></span><span>GUARD & CLOSED</span></div>
+    <div class="line"><span>GRD PWR</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>Emergency Exit Lights</span><span class="dots"></span><span>GUARD CLOSED</span></div>
+    <div class="line"><span>Position Lights</span><span class="dots"></span><span>STEADY</span></div>
+    <div class="line"><span>Logo & Wing Lights</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>IRS Mode Selector</span><span class="dots"></span><span>NAV</span></div>
+    <div class="line"><span>Barometric Value</span><span class="dots"></span><span>LOCAL QNH</span></div>
+    <div class="line"><span>Terrain Radar</span><span class="dots"></span><span>AS NEEDED</span></div>
+    <div class="line"><span>Minimums</span><span class="dots"></span><span>AIRPORT ELEV + 1000 FT</span></div>
+  </div>
+      
+<div class="section">
+    <h2>FUEL & PAYLOAD</h2>
+    <div class="line"><span>Yaw Damper</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>CTR Fuel Pumps</span><span class="dots"></span><span>AS NEEDED</span></div>
+    <div class="line"><span>AFT & FWD Pumps</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>Fasten Belts</span><span class="dots"></span><span>AUTO</span></div>
+    <div class="line"><span>Windows & Probe Heat</span><span class="dots"></span><span>ON</span></div>
+  </div>
+      
+    <div class="section">
+    <h2>FMC ROUTE CONFIG</h2>
+    <div class="line"><span>POS INIT - IRS Position</span><span class="dots"></span><span>GPS L DATA SET REF Airport</span></div>
+    <div class="line"><span>ROUTE - Origin ICAO</span><span class="dots"></span><span>SET</span></div>
+    <div class="line"><span>ROUTE - Destination ICAO</span><span class="dots"></span><span>SET</span></div>
+    <div class="line"><span>ROUTE - Flight Number</span><span class="dots"></span><span>SET</span></div>
+    <div class="line"><span>Departure Routing</span><span class="dots"></span><span>RUNWAY & SID</span></div>
+    <div class="line"><span>Airways & Waypoint Routing</span><span class="dots"></span><span>SET</span></div>
+    <div class="line"><span>Arrival Routing</span><span class="dots"></span><span>RUNWAY & STAR</span></div>
+    <div class="line"><span>Route</span><span class="dots"></span><span>LEGS NO DISCONTINUITIES</span></div>
+    <div class="line"><span>Route</span><span class="dots"></span><span>ACTIVATED & EXECUTED</span></div>
+</div>
+
+  <div class="section">
+    <h2>FMC PERFORMANCE</h2>
+    <div class="line"><span>Cost Index</span><span class="dots"></span><span>FLIGHT PLAN CI</span></div>
+    <div class="line"><span>Reserves</span><span class="dots"></span><span>FLIGHT PLAN</span></div>
+    <div class="line"><span>Zero Fuel Weight</span><span class="dots"></span><span>FLIGHT PLAN</span></div>
+    <div class="line"><span>Trip Cruise</span><span class="dots"></span><span>FLIGHT PLAN ALTITUDE</span></div>
+    <div class="line"><span>CRZ WIND</span><span class="dots"></span><span>FLIGHT TOC TDV</span></div>
+    <div class="line"><span>Transition Altitude</span><span class="dots"></span><span>SID CHART</span></div>
+    <div class="line"><span>Perf Init Page</span><span class="dots"></span><span>EXECUTED</span></div>
+    <div class="line"><span>Actual Outside Temp</span><span class="dots"></span><span>SET</span></div>
+    <div class="line"><span>Minimums</span><span class="dots"></span><span>AIRPORT ELEV + 1000 FT</span></div>
+  </div>
+
+ <div class="section">
+    <h2>PREFLIGHT</h2>
+    <div class="line"><span>Yaw Damper</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>Fuel Pumps - CTR Fuel Pumps</span><span class="dots"></span><span>AS NEEDED</span></div>
+    <div class="line"><span>Fuel Pumps - AFT & FWD Fuel Pumps</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>Fasten Belts</span><span class="dots"></span><span>AUTO</span></div>
+    <div class="line"><span>Windows & Probe Heat</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>Hydraulic Pumps - Engine Hyd Pumps</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>Hydraulic Pumps - Electric Hyd Pumps</span><span class="dots"></span><span>ON</span></div>
+</div>
+      
+    <div class="section">
+    <h2>AC & PRESSURIZATION</h2>
+    <div class="line"><span>Trim Air</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>L & R Air Conditioning Pack</span><span class="dots"></span><span>AUTO</span></div>
+    <div class="line"><span>Isolation Valve</span><span class="dots"></span><span>OPEN</span></div>
+    <div class="line"><span>APU Bleed</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Engine Bleed 1 & 2</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>Flight Altitude Indicator</span><span class="dots"></span><span>CRUISE ALTITUDE</span></div>
+    <div class="line"><span>Landing Altitude Indicator</span><span class="dots"></span><span>RWY ELEVATION</span></div>
+</div>
+
+  <div class="section">
+    <h2>MCP PREPARATION</h2>
+    <div class="line"><span>Flight Directors</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>Course 1 & 2</span><span class="dots"></span><span>TO SID-VOR</span></div>
+    <div class="line"><span>Departure Heading</span><span class="dots"></span><span>ACCORDING CHARTS</span></div>
+    <div class="line"><span>Initial Climb Clearance</span><span class="dots"></span><span>ACCORDING CHARTS</span></div>
+    <div class="line"><span>Autobrakes</span><span class="dots"></span><span>RTO</span></div>
+    <div class="line"><span>Fuel Flow</span><span class="dots"></span><span>RESET THEN RATE</span></div>
+  </div>
+
+  <div class="section">
+    <h2>ATC CLEARANCE</h2>
+    <div class="line"><span>Contact ATC</span><span class="dots"></span><span>DONE</span></div>
+    <div class="line"><span>Transponder Code</span><span class="dots"></span><span>AS GIVEN BY ATC</span></div>
+    <div class="line"><span>Transponder</span><span class="dots"></span><span>ALT OFF (IVAO STBY)</span></div>
+  </div>
+      
+    <div class="section">
+    <h2>TAKEOFF REF</h2>
+    <div class="line"><span>FMC, TAKEOFF REF - Takeoff Flaps</span><span class="dots"></span><span>AS CALCULATED</span></div>
+    <div class="line"><span>FMC, TAKEOFF REF - Center of Gravity</span><span class="dots"></span><span>ACC: LOADSHEET</span></div>
+    <div class="line"><span>FMC, TAKEOFF REF - V1, V2, VT</span><span class="dots"></span><span>CALCULATE & COMPARE</span></div>
+    <div class="line"><span>MCP PANEL - Speed BUG</span><span class="dots"></span><span>V2 SPEED</span></div>
+    <div class="line"><span>MCP PANEL - Stab Trim Wheel</span><span class="dots"></span><span>AS CALCULATED BY FMC</span></div>
+</div>
+      
+    <div class="section">
+    <h2>BEFORE START</h2>
+    <div class="line"><span>APU</span><span class="dots"></span><span>START | RUNNING</span></div>
+    <div class="line"><span>Transponder</span><span class="dots"></span><span>AUTO</span></div>
+    <div class="line"><span>Middle APU Generators</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>APU Bleed</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>GPU</span><span class="dots"></span><span>DISCONNECT</span></div>
+    <div class="line"><span>Pushback</span><span class="dots"></span><span>REQUEST</span></div>
+    <div class="line"><span>Chocks</span><span class="dots"></span><span>RETRACTED</span></div>
+    <div class="line"><span>Anti Collisions Lights</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>L & R Air Conditioning Pack</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>ACARS</span><span class="dots"></span><span>STARTED</span></div>
+</div>
+
+  <div class="section">
+    <h2>PUSHBACK & ENGINE START</h2>
+    <div class="line"><span>Start Switch 2</span><span class="dots"></span><span>GROUND</span></div>
+    <div class="line"><span>Engine 2 Lever</span><span class="dots"></span><span>IDLE at 25% N2</span></div>
+    <div class="line"><span>Start Switch 1</span><span class="dots"></span><span>GROUND</span></div>
+    <div class="line"><span>Engine 1 Lever</span><span class="dots"></span><span>IDLE at 25% N2</span></div>
+    <div class="line"><span>Engine Generators</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>APU</span><span class="dots"></span><span>OFF</span></div>
+  </div>
+
+  <div class="section">
+    <h2>BEFORE TAXI</h2>
+    <div class="line"><span>Start Switches</span><span class="dots"></span><span>CONTINUOUS</span></div>
+    <div class="line"><span>Packs L & R</span><span class="dots"></span><span>AUTO</span></div>
+    <div class="line"><span>Isolation Valve</span><span class="dots"></span><span>AUTO</span></div>
+    <div class="line"><span>APU Bleed</span><span class="dots"></span><span>OFF</span></div>
+  </div>
+      
+    <div class="section">
+    <h2>BEFORE TAKE-OFF</h2>
+    <div class="line"><span>Chimes Only</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>Cabin Attend Button</span><span class="dots"></span><span>PUSH</span></div>
+    <div class="line"><span>Position Lights</span><span class="dots"></span><span>STROBE & STEADY</span></div>
+    <div class="line"><span>L & R Landing Lights</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>Taxi Lights</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Autothrottle</span><span class="dots"></span><span>ACTIVE</span></div>
+    <div class="line"><span>LNAV or HDG</span><span class="dots"></span><span>ACTIVE</span></div>
+    <div class="line"><span>VNAV</span><span class="dots"></span><span>ACTIVE</span></div>
+    <div class="line"><span>Transponder</span><span class="dots"></span><span>TA/RA</span></div>
+</div>
+      
+<div class="section">
+    <h2>TAKE-OFF</h2>
+    <div class="line"><span>Captain Clock Timer</span><span class="dots"></span><span>ET</span></div>
+    <div class="line"><span>Thrust Stabilized at 40% N1</span><span class="dots"></span><span>CHECKED</span></div>
+    <div class="line"><span>Activate TOGA</span><span class="dots"></span><span>SET</span></div>
+</div>      
+
+    <div class="section">
+    <h2>CLIMB</h2>
+    <div class="line"><span>Landing Gear Lever</span><span class="dots"></span><span>UP</span></div>
+    <div class="line"><span>Autopilot</span><span class="dots"></span><span>ENGAGE (ABV 1000 FT AGL)</span></div>
+    <div class="line"><span>Flaps</span><span class="dots"></span><span>RETRACT</span></div>
+    <div class="line"><span>Landing Gear Lever</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Autobrakes</span><span class="dots"></span><span>OFF</span></div>
+</div>
+      
+    <div class="section">
+    <h2>PRECRUISE (at 10.000ft)</h2>
+    <div class="line"><span>L & R Landing Lights</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>L & R Runway Turnoff Lights</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Engine Start Switches 1&2</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Logo Lights</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Wing Lights</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Anti Ice</span><span class="dots"></span><span>ON  TEMP -10°C</span></div>
+</div>
+          
+    <div class="section">
+    <h2>BEFORE DESCEND</h2>
+    <div class="line"><span>Minimums</span><span class="dots"></span><span>ACCORDING CHART</span></div>
+    <div class="line"><span>Course</span><span class="dots"></span><span>ACCORDING CHART</span></div>
+    <div class="line"><span>Altitude BUG</span><span class="dots"></span><span>ACCORDING CHART</span></div>
+    <div class="line"><span>Auto Brakes</span><span class="dots"></span><span>SET</span></div>
+    <div class="line"><span>Landing Flaps VREF</span><span class="dots"></span><span>SET</span></div>
+    <div class="line"><span>ILS Frequency</span><span class="dots"></span><span>SET</span></div>
+          </div>
+          
+    <div class="section">
+    <h2>DESCEND (at 10.000ft)</h2>
+    <div class="line"><span>L & R Landing Lights</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>Logo Lights</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Wing Lights</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Engine Start Switches 1&2</span><span class="dots"></span><span>CONTINUOUS</span></div>
+      
+    <div class="section">
+    <h2>APPROACH</h2>
+    <div class="line"><span>Flaps 1</span><span class="dots"></span><span>ACCORDING PFD</span></div>
+    <div class="line"><span>Flaps 5</span><span class="dots"></span><span>ACCORDING PFD</span></div>
+    <div class="line"><span>VOR LOC / APP SWITCH</span><span class="dots"></span><span>SET</span></div>
+    <div class="line"><span>Heading BUG</span><span class="dots"></span><span>RWY HEADING</span></div>
+    <div class="line"><span>Altitude BUG</span><span class="dots"></span><span>MISSED APPROACH</span></div>
+</div>
+
+<div class="section">
+    <h2>BEFORE LANDING</h2>
+    <div class="line"><span>Landing Gear Lever</span><span class="dots"></span><span>DOWN</span></div>
+    <div class="line"><span>Flaps 15</span><span class="dots"></span><span>ACCORDING PFD</span></div>
+    <div class="line"><span>Speedbrake Lever</span><span class="dots"></span><span>ARMED</span></div>
+    <div class="line"><span>Landing Flaps</span><span class="dots"></span><span>30 OR 40</span></div>
+    <div class="line"><span>Airspeed Bug Approach</span><span class="dots"></span><span>SET</span></div>
+    <div class="line"><span>Taxi Lights</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>Runway Turnoff Lights</span><span class="dots"></span><span>ON</span></div>
+</div>
+
+<div class="section">
+    <h2>LANDING</h2>
+    <div class="line"><span>Autopilot</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Autothrotlle</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Reverse Levers</span><span class="dots"></span><span>ON | UNTIL < 60 KNOTS</span></div>
+    <div class="line"><span>Manual Brakes</span><span class="dots"></span><span>TILL < 15 KNOTS</span></div>
+</div>
+
+<div class="section">
+    <h2>AFTER LANDING</h2>
+    <div class="line"><span>Speedbrake Lever</span><span class="dots"></span><span>RETRACT</span></div>
+    <div class="line"><span>Flaps</span><span class="dots"></span><span>RETRACT</span></div>
+    <div class="line"><span>L & R Landing Lights</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Position Lights</span><span class="dots"></span><span>STEADY</span></div>
+    <div class="line"><span>Transponder</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Auto Brakes</span><span class="dots"></span><span>OFF</span></div>
+</div>
+
+<div class="section">
+    <h2>TAXI TO GATES</h2>
+    <div class="line"><span>Flight Directors</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Windows & Probe Heat</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Engine Start Switches 1&2</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>APU</span><span class="dots"></span><span>START | RUNNING</span></div>
+    <div class="line"><span>Middle APU Generators</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>Taxi Lights</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Parking Brake</span><span class="dots"></span><span>ON</span></div>
+</div>
+
+<div class="section">
+    <h2>SHUT DOWN</h2>
+    <div class="line"><span>Engine Start Lever 1&2</span><span class="dots"></span><span>CUTOFF</span></div>
+    <div class="line"><span>Chimes Only</span><span class="dots"></span><span>ON</span></div>
+    <div class="line"><span>Fasten Belts</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Fuel Pumps</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Windows & Probe Heat</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Elec 1&2 Hyd Pumps</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Isolation Valve</span><span class="dots"></span><span>OPEN</span></div>
+    <div class="line"><span>Anti Collisions Lights</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Transponder</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>APU Master</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>L & R Air Conditioning Pack</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Trim Air</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>ADIRS 1+2+3</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>Logo & Wing Lights</span><span class="dots"></span><span>ON</span></div>
+</div>
+
+<div class="section">
+    <h2>SECURING THE AIRCRAFT</h2>
+    <div class="line"><span>Emergency Exit Lights</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>GRD PWR</span><span class="dots"></span><span>OFF</span></div>
+    <div class="line"><span>BATT 1+2</span><span class="dots"></span><span>OFF</span></div>
+</div>
+
+  </body>
+</html>
