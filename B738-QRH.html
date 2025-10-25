@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMDG 737 Quick Reference Handbook (VR)</title>
+    
+    <style>
+        /* Establece un tamaño de fuente base GRANDE (50px) por defecto, optimizado para VR */
+        html {
+            /* Cambiado a 50px según solicitud */
+            font-size: 50px; 
+            box-sizing: border-box;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            /* Colores de tema oscuro */
+            background-color: #121212; 
+            color: #ffffff;
+            font-family: Arial, sans-serif; 
+            /* Padding ajustado a rem (20px / 50px = 0.4rem) */
+            padding: 0.4rem; 
+            line-height: 1.5; 
+            font-size: 1rem; /* Tamaño base del cuerpo (50px) */
+            margin: 0;
+        }
+
+        /* Contenedor del contenido, ajustado para los nuevos estilos VR */
+        .container {
+            max-width: 900px;
+            margin: 0 auto; /* Eliminado margen superior/inferior para VR */
+            padding: 0;
+            background-color: transparent; /* Fondo transparente */
+            box-shadow: none; /* Sin sombra */
+            border: none; /* Sin borde */
+        }
+
+        /* Encabezado del Manual */
+        header {
+            text-align: center;
+            padding: 0.4rem 0;
+            border-bottom: 2px solid #4fc3f7; /* Color de línea de acento */
+            margin-bottom: 0.4rem;
+        }
+
+        header h1 {
+            /* Tamaño ajustado (1.2rem * 50px = 60px) */
+            font-size: 1.2rem; 
+            margin: 0;
+            color: #4fc3f7;
+            border-bottom: none; /* H1 ya usa el borde del header */
+            padding-bottom: 0;
+        }
+
+        header p {
+            /* Tamaño ajustado (0.8rem * 50px = 40px) */
+            font-size: 0.8rem; 
+            font-weight: bold;
+            color: #a00; /* Texto de advertencia en rojo */
+            margin-top: 0.1rem;
+        }
+        
+        h2 {
+            /* Estilos solicitados */
+            color: #4fc3f7;
+            border-bottom: 1px solid #4fc3f7;
+            /* Padding ajustado (5px / 50px = 0.1rem) */
+            padding-bottom: 0.1rem; 
+            /* Margen ajustado (16px / 50px = 0.32rem) */
+            margin-bottom: 0.32rem; 
+            margin-top: 0.4rem; 
+            font-weight: bold; 
+            /* Tamaño ajustado (1.1rem * 50px = 55px) */
+            font-size: 1.1rem; 
+        }
+
+        p { /* Estilo para los párrafos de versión/propietario */
+            /* Tamaño ajustado (0.8rem * 50px = 40px) */
+            font-size: 0.8rem; 
+            margin-bottom: 0.1rem; 
+            margin-top: 0; 
+            color: #bdbdbd; /* Un gris más claro */
+            line-height: 1.2; 
+        }
+        p strong {
+            color: #e0e0e0; 
+        }
+
+        .index-note {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 0.4rem;
+        }
+
+        .index-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .index-list li {
+            padding: 0;
+            margin-bottom: 0.16rem;
+        }
+        
+        /* REEMPLAZO DE .index-list li a POR .line */
+        .line {
+            display: flex;
+            justify-content: space-between;
+            text-decoration: none;
+            color: #ffffff; /* Color de texto blanco por defecto */
+            font-family: monospace; /* Mantenemos monoespaciada para alineación */
+            /* Tamaño ajustado (0.9rem * 50px = 45px) */
+            font-size: 0.9rem; 
+            /* Margen ajustado (8px / 50px = 0.16rem) */
+            margin-bottom: 0.16rem; 
+            align-items: baseline; 
+            /* Grosor recomendado para VR */
+            font-weight: 500; 
+        }
+        
+        /* El elemento de enlace <a> actúa como .line, el hover es para ese elemento */
+        .index-list li a.line:hover {
+            color: #4fc3f7; /* Azul claro al pasar el ratón */
+            background-color: #222;
+        }
+
+        .line span {
+            flex-shrink: 0;
+            /* Padding ajustado (8px / 50px = 0.16rem) */
+            padding-right: 0.16rem; 
+        }
+        .line span:first-child {
+            /* El título del procedimiento debe ser un enlace activo */
+            color: #ffffff; 
+        }
+        .line span:last-child {
+            /* Padding ajustado (8px / 50px = 0.16rem) */
+            padding-left: 0.16rem; 
+            padding-right: 0;
+            font-weight: bold; 
+            color: #a5d6a7; /* Color verde claro para el número de sección */
+        }
+
+        .dots {
+            flex-grow: 1;
+            border-bottom: 1px dotted #777;
+            /* Margen ajustado (10px / 50px = 0.2rem) */
+            margin: 0 0.2rem; 
+            position: relative;
+            bottom: 0.25em; 
+            min-width: 0.4rem; 
+        }
+
+        /* Estilo de las Secciones de Procedimiento */
+        .procedure-item {
+            /* Usamos el ID como destino del enlace */
+            padding-top: 0.4rem; /* Pequeño padding para que el ancla no oculte el encabezado */
+            margin-top: 0.4rem;
+        }
+
+        .procedure-item h3 {
+            font-size: 1rem;
+            color: #4fc3f7;
+            margin-bottom: 0.2rem;
+        }
+        
+        .procedure-item p {
+            font-size: 0.9rem; /* Texto de condición un poco más grande */
+            color: #e0e0e0;
+        }
+
+        .procedure-item ol {
+            padding-left: 1rem;
+            margin-top: 0.2rem;
+        }
+
+        .procedure-item li {
+            margin-bottom: 0.1rem;
+            font-size: 0.9rem;
+            color: #ffffff;
+        }
+
+        .procedure-item strong {
+            color: #ff9800; /* Acciones críticas en color naranja para destacar */
+            font-weight: bold;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #4fc3f7;
+            margin: 0.5rem 0;
+        }
+        
+        /* Asegurar que el scroll se inicie en la parte superior del elemento */
+        [id]:before {
+            display: block;
+            content: " ";
+            margin-top: -1rem; /* Compensa el padding del body o header */
+            height: 1rem;
+            visibility: hidden;
+            pointer-events: none;
+        }
+    </style>
+    
+    <script>
+        // Función para un desplazamiento suave a los enlaces
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PMDG 737 Quick Reference Handbook</h1>
+            <p>DO NOT USE FOR FLIGHT</p>
+        </header>
+    
+        <section id="qa-index" class="section">
+            <h2>Quick Action Index</h2>
+            <p class="index-note">Lista de procedimientos de acción rápida y sus referencias de sección.</p>
+            <ul class="index-list">
+                <li>
+                    <a href="#section-7-1" class="line">
+                        <span>Aborted Engine Start</span>
+                        <span class="dots"></span>
+                        <span>7.1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-7-2" class="line">
+                        <span>Aborted Engine Start (EGT)</span>
+                        <span class="dots"></span>
+                        <span>7.2</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-10-1" class="line">
+                        <span>Airspeed Unreliable</span>
+                        <span class="dots"></span>
+                        <span>10.1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-8-1" class="line">
+                        <span>APU FIRE</span>
+                        <span class="dots"></span>
+                        <span>8.1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-2-1" class="line">
+                        <span>CABIN ALTITUDE WARNING / Rapid Depressurization</span>
+                        <span class="dots"></span>
+                        <span>2.1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-9-1" class="line">
+                        <span>Elevator Tab Limit Cycle Oscillation</span>
+                        <span class="dots"></span>
+                        <span>9.1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-0-1" class="line">
+                        <span>Emergency Descent</span>
+                        <span class="dots"></span>
+                        <span>0.1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-8-2" class="line">
+                        <span>ENGINE FIRE / Severe Damage or Separation</span>
+                        <span class="dots"></span>
+                        <span>8.2</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-7-3" class="line">
+                        <span>Engine Limit or Surge or Stall</span>
+                        <span class="dots"></span>
+                        <span>7.3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-8-5" class="line">
+                        <span>ENGINE OVERHEAT</span>
+                        <span class="dots"></span>
+                        <span>8.5</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-8-6" class="line">
+                        <span>Engine Tailpipe Fire</span>
+                        <span class="dots"></span>
+                        <span>8.6</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-7-6" class="line">
+                        <span>Loss Of Thrust On Both Engines</span>
+                        <span class="dots"></span>
+                        <span>7.6</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-15-1" class="line">
+                        <span>Overspeed / TAKEOFF CONFIGURATION</span>
+                        <span class="dots"></span>
+                        <span>15.1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-9-2" class="line">
+                        <span>Runaway Stabilizer</span>
+                        <span class="dots"></span>
+                        <span>9.2</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-8-8" class="line">
+                        <span>Smoke, Fire or Fumes</span>
+                        <span class="dots"></span>
+                        <span>8.8</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-15-2" class="line">
+                        <span>WARNING HORN - CABIN ALTITUDE OR CONFIGURATION</span>
+                        <span class="dots"></span>
+                        <span>15.2</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#section-back-cover-2" class="line">
+                        <span>Evacuation</span>
+                        <span class="dots"></span>
+                        <span>Back Cover.2</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    
+        <hr>
+    
+        <section id="procedures">
+            <h2>Procedures (Section Content)</h2>
+            <p class="index-note">El contenido real de los procedimientos se ha reemplazado con texto de muestra. La navegación mediante los enlaces del índice está operativa.</p>
+    
+            <article id="section-7-1" class="procedure-item section">
+                <h3>7.1 - Aborted Engine Start (N1 no acelera)</h3>
+                <p><strong>Condition:</strong> No N1 indication after start lever is moved to idle detent.</p>
+                <ol>
+                    <li>Start lever (affected engine) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . **CUTOFF**</li>
+                    <li>Engine start switch (affected engine) . . . . . . . . . . . . . . . . . . . . . . . . . . . **FLT** (30 sec)</li>
+                </ol>
+            </article>
+    
+            <article id="section-7-2" class="procedure-item section">
+                <h3>7.2 - Aborted Engine Start (EGT Limit)</h3>
+                <p><strong>Condition:</strong> EGT rapidly approaching or exceeding limit. [Sample content]</p>
+                <ol>
+                    <li>Start lever (affected engine) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . **CUTOFF**</li>
+                    <li>Engine start switch (affected engine) . . . . . . . . . . . . . . . . . . . . . . . . . . . **FLT** (30 sec)</li>
+                </ol>
+            </article>
+    
+            <article id="section-2-1" class="procedure-item section">
+                <h3>2.1 - CABIN ALTITUDE WARNING / Rapid Depressurization</h3>
+                <p><strong>Condition:</strong> CABIN ALTITUDE Warning light illuminates or rapid depressurization is indicated. [Sample content]</p>
+                <ol>
+                    <li>Oxygen masks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . **ON and 100%**</li>
+                    <li>Crew communications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . **Establish**</li>
+                    <li>Decent . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . **Initiate** (See **0.1 Emergency Descent**)</li>
+                </ol>
+            </article>
+    
+            <article id="section-0-1" class="procedure-item section">
+                <h3>0.1 - Emergency Descent</h3>
+                <p><strong>Condition:</strong> For all procedures requiring Emergency Descent. [Sample content]</p>
+                <ol>
+                    <li>Thrust levers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . **IDLE**</li>
+                    <li>Speedbrakes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . **FLIGHT DETENT**</li>
+                    <li>Airspeed . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . **Mmo/Vmo**</li>
+                </ol>
+            </article>
+    
+            <article id="section-9-2" class="procedure-item section">
+                <h3>9.2 - Runaway Stabilizer</h3>
+                <p><strong>Condition:</strong> Uncommanded stabilizer movement occurs. [Sample content]</p>
+                <ol>
+                    <li>Control column . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . **Hold firmly**</li>
+                    <li>Autopilot (if engaged) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . **Disengage**</li>
+                    <li>Stabilizer Trim Cutout switches . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . **CUTOUT** (both)</li>
+                </ol>
+            </article>
+    
+            <article id="section-back-cover-2" class="procedure-item section">
+                <h3>Back Cover.2 - Evacuation Checklist</h3>
+                <p><strong>Condition:</strong> Required for all evacuations. [Sample content from Back Cover.2]</p>
+                <ol>
+                    <li>PARKING BRAKE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . **Set**</li>
+                    <li>Speedbrake lever . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . **DOWN**</li>
+                    <li>FLAP lever . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . **40**</li>
+                </ol>
+            </article>
+    
+            <article id="section-10-1" class="procedure-item section"><h3>10.1 - Airspeed Unreliable</h3><p>Procedure content...</p></article>
+            <article id="section-8-1" class="procedure-item section"><h3>8.1 - APU FIRE</h3><p>Procedure content...</p></article>
+            <article id="section-9-1" class="procedure-item section"><h3>9.1 - Elevator Tab Limit Cycle Oscillation</h3><p>Procedure content...</p></article>
+            <article id="section-8-2" class="procedure-item section"><h3>8.2 - ENGINE FIRE / Severe Damage or Separation</h3><p>Procedure content...</p></article>
+            <article id="section-7-3" class="procedure-item section"><h3>7.3 - Engine Limit or Surge or Stall</h3><p>Procedure content...</p></article>
+            <article id="section-8-5" class="procedure-item section"><h3>8.5 - ENGINE OVERHEAT</h3><p>Procedure content...</p></article>
+            <article id="section-8-6" class="procedure-item section"><h3>8.6 - Engine Tailpipe Fire</h3><p>Procedure content...</p></article>
+            <article id="section-7-6" class="procedure-item section"><h3>7.6 - Loss Of Thrust On Both Engines</h3><p>Procedure content...</p></article>
+            <article id="section-15-1" class="procedure-item section"><h3>15.1 - Overspeed / TAKEOFF CONFIGURATION</h3><p>Procedure content...</p></article>
+            <article id="section-8-8" class="procedure-item section"><h3>8.8 - Smoke, Fire or Fumes</h3><p>Procedure content...</p></article>
+            <article id="section-15-2" class="procedure-item section"><h3>15.2 - WARNING HORN - CABIN ALTITUDE OR CONFIGURATION</h3><p>Procedure content...</p></article>
+    
+        </section>
+    </div>
+</body>
+</html>
