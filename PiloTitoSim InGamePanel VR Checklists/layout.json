@@ -1,34 +1,34 @@
 {
   "content": [
-    {
-      "path": "html_ui/icons/toolbar/checklist-svgrepo-com.svg",
-      "size": 3580,
-      "date": 132587166987607114
+	{
+      "path": "html_ui/icons/toolbar/Logo_PiloTito_VRChecklist.svg",
+      "size": 702,
+      "date": 132401952992678246
     },
     {
-      "path": "html_ui/InGamePanels/JDChecklistPanel/JDChecklistPanel.css",
-      "size": 1585,
-      "date": 132587166987477460
+      "path": "html_ui/InGamePanels/ChecklistPanel/ChecklistPanel.css",
+      "size": 1009,
+      "date": 132441482909180874
     },
     {
-      "path": "html_ui/InGamePanels/JDChecklistPanel/JDChecklistPanel.html",
-      "size": 1881,
-      "date": 132587166987557508
+      "path": "html_ui/InGamePanels/ChecklistPanel/ChecklistPanel.html",
+      "size": 3119,
+      "date": 132440507097241168
     },
     {
-      "path": "html_ui/InGamePanels/JDChecklistPanel/JDChecklistPanel.js",
-      "size": 1177,
-      "date": 132689993517256688
+      "path": "html_ui/InGamePanels/ChecklistPanel/ChecklistPanel.js",
+      "size": 5517,
+      "date": 132442481411972180
     },
     {
-      "path": "html_ui/Textures/Menu/toolbar/checklist-svgrepo-com.svg",
-      "size": 3580,
-      "date": 132587166987607114
+      "path": "html_ui/Textures/Menu/toolbar/Logo_PiloTito_VRChecklist.svg",
+      "size": 702,
+      "date": 132401952992678246
     },
     {
-      "path": "InGamePanels/fs-base-jdingamepanels-checklist.spb",
-      "size": 703,
-      "date": 132587167311420237
+      "path": "InGamePanels/pilotitosim-ingamepanels-custom.spb",
+      "size": 693,
+      "date": 134058575090583648
     }
   ]
 }
